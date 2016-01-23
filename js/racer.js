@@ -1,38 +1,32 @@
-// racer.js - a drag racing game in JS
-// by Howard Smith 16/01/2016 AD
-// char x = 88
-// char o = 79
+var gameOver = false;
 
-$(document).ready(function() {
-  function doStuff() {
- // $(".racer_table #player1_strip .active").html("X");
-    $(".racer_table #player1_strip .active").next().addClass("active").html("X");
-    if($("#finish_line_x").hasClass("active") ) {
-      alert("X wins!");
+$( document ).keypress(function(e) {
+  console.log(e);
+
+  if (gameOver == false) {
+
+
+  var code = e.keyCode || e.which;
+
+ if(code === 81 || code === 113) {
+
+    $( "#player1_strip .active" ).removeClass("active").next().addClass("active");
+
+    if ($("#finish_line_p1").hasClass("active")) {
+      gameOver = true;
+      alert('Player 1 wins!');
     }
+
   }
 
-  function doOtherStuff() {
-   // $(".racer_table #player2_strip .active").html("O");
-    $(".racer_table #player2_strip .active").next().addClass("active").html("O");
-    if($("#finish_line_o").hasClass("active") ) {
-      alert("O wins!");
+  if(code === 80 || code === 112) {
+   $( "#player2_strip .active" ).removeClass("active").next().addClass("active");
+
+   if ($("#finish_line_p2").hasClass("active")) {
+      gameOver = true;
+      alert('Player 2 wins!');
     }
   }
-
-  $("button#resetButton").click(function() {
-      alert("OK, I'm resetting");
-      location.reload();
-    });
-  //$("button#otherGoButton").click(doOtherStuff);
-
-  $(document).keyup(function(e){
-    if(event.which == 88) {
-      doStuff();
-    } else
-    if(event.which == 79) {
-      doOtherStuff();
-    }
-  });
+  }
 });
 

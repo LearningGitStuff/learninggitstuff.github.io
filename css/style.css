@@ -1,11 +1,11 @@
 .racer_table td {
   background-color: gray;
-  height: 20px;
-  width: 20px;
+  height: 90px;
+  width: 90px;
 }
 
 #player1_strip .active {
-  background-color: orange;
+  background: url('../img/trump.png');
 }
 
 #player2_strip .active {
