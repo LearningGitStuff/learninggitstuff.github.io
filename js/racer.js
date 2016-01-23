@@ -14,7 +14,7 @@ $( document ).keypress(function(e) {
 
     if ($("#finish_line_p1").hasClass("active")) {
       gameOver = true;
-      alert('Player 1 wins!');
+      alert('Trump Wins! Cash money yo!');
     }
 
   }
@@ -24,7 +24,7 @@ $( document ).keypress(function(e) {
 
    if ($("#finish_line_p2").hasClass("active")) {
       gameOver = true;
-      alert('Player 2 wins!');
+      alert('Hillary Wins. Girl Power');
     }
   }
   }

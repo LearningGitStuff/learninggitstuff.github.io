@@ -22,6 +22,12 @@ body {
   text-align: center;
 }
 
+.header {
+  margin: 0 auto;
+  padding: 15px;
+  width: 840px;
+  background: rgba(255,000,255,0.5);
+}
 /*
 body,
 div,
